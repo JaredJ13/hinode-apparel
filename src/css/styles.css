@@ -26,8 +26,12 @@ body{
 
 .logo{
     font-family: 'Rampart One', cursive;
-    color: white;
     margin: 2rem 2rem 0 2rem;
+}
+
+.logo a{
+    color: white;
+    cursor: pointer;
 }
 
 .bi-list{
@@ -44,10 +48,21 @@ body{
     justify-content: space-between;
 }
 
+.h2-bottom-line{
+    width: 16rem;
+    margin: 0 auto 3rem auto;
+    border-bottom: 1px solid rgb(212, 212, 212);
+}
+
 .primary-navigation{
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+.primary-navigation a:hover{
+    color: #658ac2;
+    transition: 0.3s;
 }
 
 h4{
@@ -62,20 +77,31 @@ h4{
 main h2{
     width: 25rem;
     text-align: center;
-    margin: 3rem auto 0 auto;
+    margin: 3rem auto 1rem auto;
     color: rgb(0, 0, 0);
 }
 
+.absolute-positioned-side-menu{
+    
+}
+
 /* PODUCT CARDS */
+
+.product-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 a
 {
     text-decoration: none;
 }
 .product-card {
-    width: 380px;
+    flex: 0 1 40%;
     position: relative;
-    box-shadow: 0 2px 7px #dfdfdf;
-    margin: 50px auto;
+    box-shadow: 0 2px 7px #658ac2;
+    margin: 25px auto;
     background: #fafafa;
 }
 
@@ -91,6 +117,7 @@ a
 .product-tumb img {
     max-width: 100%;
     max-height: 100%;
+    padding: 0.5rem;
 }
 
 .product-details {
@@ -107,7 +134,7 @@ a
 }
 
 .product-details h4 a {
-    font-weight: 500;
+    font-weight: 600;
     display: block;
     margin-bottom: 18px;
     text-transform: uppercase;
@@ -140,16 +167,8 @@ a
 
 .product-price {
     font-size: 18px;
-    color: #658ac2;
+    color: black;
     font-weight: 600;
-}
-
-.product-price small {
-    font-size: 80%;
-    font-weight: 400;
-    text-decoration: line-through;
-    display: inline-block;
-    margin-right: 5px;
 }
 
 .product-links {
@@ -164,8 +183,22 @@ a
     font-size: 17px;
 }
 
-.product-links a:hover {
-    color: #fbb72c;
+.product-links a:first-of-type:hover {
+    color: #658ac2;
+}
+
+.product-links a:last-of-type:hover {
+    color: #aa4242;
+}
+
+/* FOOTER */
+
+footer{
+    height: 4rem;
+}
+
+.footer-top-border{
+    border-top: 1px solid rgb(212, 212, 212);
 }
 
 /* MEDIA QUERIES */
@@ -195,6 +228,10 @@ a
         color: white;
         top: 2rem;
         right: 2rem;
+    }
+
+    .product-card{
+        flex: 0 1 60%;
     }
 }
 
