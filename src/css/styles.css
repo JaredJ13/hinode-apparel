@@ -81,8 +81,13 @@ main h2{
     color: rgb(0, 0, 0);
 }
 
-.absolute-positioned-side-menu{
-    
+main{
+    display: flex;
+}
+
+.inner-container-side-menu{
+    position: absolute;
+    padding: 1rem 0 0 1rem;
 }
 
 /* PODUCT CARDS */
@@ -191,6 +196,16 @@ a
     color: #aa4242;
 }
 
+/* PRODUCT CARD WRITE */
+.product-tumb-write {
+    display: inline-block;
+    height: 300px;
+    width: auto;
+    padding: 0px;
+    background: #ffffff;
+}
+
+
 /* FOOTER */
 
 footer{
@@ -240,6 +255,10 @@ footer{
         margin-right: 2rem;
         gap: 4rem;
     }
+
+    .product-card{
+        flex: 0 1 40%;
+    }
 }
 
 @media (min-width: 1200px){
@@ -252,6 +271,9 @@ footer{
         gap: 4rem;
     }
 
+    .product-card{
+        flex: 0 1 25%;
+    }
 }
 
 .primary-navigation a{

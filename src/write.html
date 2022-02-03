@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Product</title>
+
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="js/write.js" type="module" defer></script>
+    <script src="js/nav.js" defer></script>
+</head>
+<body>
+    <header class="primary-header">
+        <div class="inner-container flex">
+            <div>
+                <h1 class="logo"><a href="index.html">日の出</a></h1>
+                <h4>Hinode Apparel</h4>
+            </div>
+    
+            <a class="mobile-nav-toggle" aria-controls="primary-naviagtion">
+                <span class="sr-only">Menu</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor" class="bi hidden bi-x-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                    <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                  </svg>
+            </a>
+    
+           <nav>
+               <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+                   <li class="active">
+                       <a href="index.html">
+                           <span>SHOP</span>
+                       </a>
+                   </li>
+                   <li class="active">
+                        <a href="index.html">
+                            <span>ABOUT</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="index.html">
+                            <span>CONTACT</span>
+                        </a>
+                    </li>
+               </ul>
+           </nav>
+        </div>
+    </header>
+    <main>
+        <div class="inner-container-write">
+            <div class="product-card">
+                <form id="productForm" class="new-product">
+                    <div class="product-tumb-write">
+                        <p>Select image to represent the product</p>
+                        <input type="file" id="productImage"  class="select-file"   accept=".jpg, .png, .jpeg, .webp">
+                    </div>
+                    <div class="product-details">
+                        <input class="product-category" type="text" id="productCategory" placeholder="Gender Category"></input>
+                        <input class="product-title" type="text" id="productTitle" placeholder="Product Title"></input>
+                        <input class="product-description" id="productDescription" type="text" placeholder="Product Description"></input>
+                        <div class="product-bottom-details">
+                            <input class="product-price" id="productPrice" type="number" placeholder="Product Price"></input>
+                        </div>
+                    </div>
+                    <div class="submit-new-product">
+                        <button type="submit">Submit New Product</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
