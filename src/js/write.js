@@ -3,12 +3,20 @@ import { ref as databaseRef, push, set, get, remove } from "firebase/database"
 import { db, storage } from "./libs/firebaseConfig"
 
 const submitProductButton = document.querySelector('#productForm')
+const productImageInput = document.querySelector('#productImage')
 
 submitProductButton.addEventListener('submit', onAddProduct)
+productImageInput.addEventListener('change', newImageSelected)
 
 function onAddProduct(e) {
     e.preventDefault()
     AddNewProduct()
+}
+
+function newImageSelected(e) {
+    let file = e.target.files[0]
+
+    document.querySelector('.display img').src = URL.createObjectURL(file)
 }
 
 async function AddNewProduct() {
@@ -23,6 +31,7 @@ async function AddNewProduct() {
     category = category.value.trim()
     title = title.value.trim()
     description = description.value.trim()
+    price = price.value
 
     console.log(db)
     console.log(imageFile.name)

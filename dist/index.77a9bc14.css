@@ -38,6 +38,18 @@ body{
     margin-top: 1.2rem;
 }
 
+.bi-list:hover{
+    cursor: pointer;
+    transition: 0.3s;
+    color: #6c89b4;
+}
+
+.bi-x-lg:hover{
+    cursor: pointer;
+    transition: 0.3s;
+    color: #aa4242;
+}
+
 .primary-header{
     background-color: rgb(19, 18, 18);
     font-size: 1.25rem;
@@ -74,6 +86,7 @@ h4{
 }
 
 /* MAIN CONTENT */
+
 main h2{
     width: 25rem;
     text-align: center;
@@ -81,13 +94,33 @@ main h2{
     color: rgb(0, 0, 0);
 }
 
-main{
-    display: flex;
+.widget-menu{
+    text-align: center;
+    background-image: linear-gradient(rgb(212, 212, 212), rgb(255, 255, 255));
 }
 
-.inner-container-side-menu{
-    position: absolute;
-    padding: 1rem 0 0 1rem;
+.widget-menu a{
+    color: rgb(133, 130, 130);
+}
+
+.widget-menu a:hover{
+    color: #658ac2;
+    transition: 0.3s;
+}
+
+.widget-menu ul{
+    display: flex;
+    justify-content: center;
+}
+
+.widget-menu li{
+    margin: 1rem 0 1rem 1rem;
+    padding-right: 1rem;
+    border-right: 1px solid rgb(180, 178, 178);
+}
+
+.widget-menu li:last-of-type{
+    border: none;
 }
 
 /* PODUCT CARDS */
@@ -102,6 +135,7 @@ a
 {
     text-decoration: none;
 }
+
 .product-card {
     flex: 0 1 40%;
     position: relative;
@@ -197,14 +231,74 @@ a
 }
 
 /* PRODUCT CARD WRITE */
+.product-card-write{
+    width: 25rem;
+    box-shadow: 0 2px 7px #658ac2;
+    margin: 25px auto;
+    background: #fafafa;
+    padding: 1rem;
+}
+
 .product-tumb-write {
     display: inline-block;
     height: 300px;
-    width: auto;
+    width: 100%;
     padding: 0px;
     background: #ffffff;
 }
 
+.product-tumb-write img {
+    max-width: 100%;
+    max-height: 300px;
+    padding: 0.5rem;
+    object-fit: fill;
+}
+
+.product-card-write label{
+    border-bottom: 1px solid rgb(212, 212, 212);
+    color: #000000;
+    margin-left: 8.7rem;
+}
+
+.product-card-write label:hover{
+    color: #bbb9b9;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.product-details-write input{
+    width: 60%;
+    margin: 0.5rem auto;
+    display: block;
+    border: none;
+    border-radius: 0.2rem;
+    background-color: #c5d7f1;
+}
+
+.submit-new-product {
+    display: flex;
+    justify-content: center;
+}
+
+.submit-new-product button{
+    color: #ffffff;
+    padding: 0.75rem;
+    border: none;
+    background: rgb(66, 66, 66);
+    border-radius: 0.4rem;
+}
+
+.submit-new-product button:hover{
+    cursor: pointer;
+    color: #93bbf8;
+    transition: 0.3s;
+}
+
+.display{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 /* FOOTER */
 
@@ -259,6 +353,10 @@ footer{
     .product-card{
         flex: 0 1 40%;
     }
+
+    main h2{
+        width: 28rem;
+    }
 }
 
 @media (min-width: 1200px){
@@ -272,8 +370,13 @@ footer{
     }
 
     .product-card{
-        flex: 0 1 25%;
+        flex: 0 1 30%;
     }
+
+    main h2{
+        width: 40rem;
+    }
+
 }
 
 .primary-navigation a{

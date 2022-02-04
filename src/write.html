@@ -38,6 +38,11 @@
     
            <nav>
                <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+                    <li class="active">
+                        <a href="index.html">
+                            <span>HOME</span>
+                        </a>
+                    </li>
                    <li class="active">
                        <a href="index.html">
                            <span>SHOP</span>
@@ -58,19 +63,24 @@
         </div>
     </header>
     <main>
-        <div class="inner-container-write">
-            <div class="product-card">
+        <div class="inner-container">
+            <div class="product-card-write">
                 <form id="productForm" class="new-product">
                     <div class="product-tumb-write">
-                        <p>Select image to represent the product</p>
-                        <input type="file" id="productImage"  class="select-file"   accept=".jpg, .png, .jpeg, .webp">
+                        <div class="display">
+                            <img src="assets/apparel/plain-long-sleeve.png" alt="plain long sleeve shirt">
+                        </div>
+                        <div>
+                            <label for="productImage">Select Image</label>
+                            <input type="file" id="productImage" style="display:none" class="select-file"   accept=".jpg, .png, .jpeg, .webp">
+                        </div>
                     </div>
-                    <div class="product-details">
-                        <input class="product-category" type="text" id="productCategory" placeholder="Gender Category"></input>
-                        <input class="product-title" type="text" id="productTitle" placeholder="Product Title"></input>
-                        <input class="product-description" id="productDescription" type="text" placeholder="Product Description"></input>
-                        <div class="product-bottom-details">
-                            <input class="product-price" id="productPrice" type="number" placeholder="Product Price"></input>
+                    <div class="product-details-write">
+                        <input class="product-category-write" type="text" id="productCategory" placeholder="Gender Category"></input>
+                        <input class="product-title-write" type="text" id="productTitle" placeholder="Product Title"></input>
+                        <input class="product-description-write" id="productDescription" type="text" placeholder="Product Description"></input>
+                        <div class="product-bottom-details-write">
+                            <input class="product-price-write" id="productPrice" type="text" placeholder="Product Price"></input>
                         </div>
                     </div>
                     <div class="submit-new-product">

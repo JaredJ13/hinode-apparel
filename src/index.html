@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/styles.css"/>
 
     <script src="js/nav.js" defer></script>
+    <script type="module" src="js/read.js"></script>
 
 </head>
 <body>
@@ -39,6 +40,11 @@
     
            <nav>
                <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+                    <li class="active">
+                        <a href="index.html">
+                            <span>HOME</span>
+                        </a>
+                    </li>
                    <li class="active">
                        <a href="index.html">
                            <span>SHOP</span>
@@ -59,20 +65,21 @@
         </div>
     </header>
     <main>
-        <div class="absolute-positioned-side-menu">
-            <div class="inner-container-side-menu">
+        <div class="widget-menu">
+            <div class="inner-container">
                 <ul>
                     <li><a href="write.html">Add New Product</a></li>
+                    
                 </ul>
             </div>
         </div>
         <div class="inner-container">
-            <div>
+            <div class="h2-index">
                 <h2>Hidone Apparel provides pre-eminent attire inpsired by anime and Japanese culture.</h2>
             </div>
             <div class="h2-bottom-line"></div>
             <div class="product-cards">
-                <div class="product-card">
+                <!-- <div class="product-card">
                     <div class="product-tumb">
                         <img src="assets/apparel/aot-black-hoodie.webp" alt="">
                     </div>
@@ -94,53 +101,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-tumb">
-                        <img src="assets/apparel/demon-slayer-grey-hoodie.webp" alt="">
-                    </div>
-                    <div class="product-details">
-                        <span class="product-category">Unisex</span>
-                        <h4><a href="">Attack on Titan Hoodie</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
-                        <div class="product-bottom-details">
-                            <div class="product-price">$44.99</div>
-                            <div class="product-links">
-                                <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-                                  </svg><i class="fa fa-heart"></i></a>
-                                <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
-                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                                  </svg><i class="fa fa-shopping-cart"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-tumb">
-                        <img src="assets/apparel/tokyo-white-hoodie.webp" alt="">
-                    </div>
-                    <div class="product-details">
-                        <span class="product-category">Unisex</span>
-                        <h4><a href="">Attack on Titan Hoodie</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
-                        <div class="product-bottom-details">
-                            <div class="product-price">$44.99</div>
-                            <div class="product-links">
-                                <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-                                  </svg><i class="fa fa-heart"></i></a>
-                                <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
-                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                                  </svg><i class="fa fa-shopping-cart"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </main>

@@ -523,10 +523,16 @@ var _storage = require("firebase/storage");
 var _database = require("firebase/database");
 var _firebaseConfig = require("./libs/firebaseConfig");
 const submitProductButton = document.querySelector('#productForm');
+const productImageInput = document.querySelector('#productImage');
 submitProductButton.addEventListener('submit', onAddProduct);
+productImageInput.addEventListener('change', newImageSelected);
 function onAddProduct(e) {
     e.preventDefault();
     AddNewProduct();
+}
+function newImageSelected(e) {
+    let file = e.target.files[0];
+    document.querySelector('.display img').src = URL.createObjectURL(file);
 }
 async function AddNewProduct() {
     let imageFile = document.querySelector('#productImage');
@@ -539,6 +545,7 @@ async function AddNewProduct() {
     category = category.value.trim();
     title = title.value.trim();
     description = description.value.trim();
+    price = price.value;
     console.log(_firebaseConfig.db);
     console.log(imageFile.name);
     //set refs to paths to write to in firebase
