@@ -1,6 +1,6 @@
 import { ref as dataRef, get, set, update } from 'firebase/database';
 import { db } from './libs/firebaseConfig';
-import { productCard, productCard } from './templates/productCard'
+import { productCard } from './templates/productCard'
 
 async function pageInit() {
     const productRef = dataRef(db, 'Products/')
@@ -9,7 +9,6 @@ async function pageInit() {
 
     Object.values(data).map(product => {
         const card = productCard(product)
-        console.log(card)
         // productCard(product) returns the element created from template
         document.querySelector('.product-cards').append(card)
     })

@@ -288,10 +288,24 @@ a
     border-radius: 0.4rem;
 }
 
+.submit-new-product button:last-of-type{
+    margin-left: 1.8rem;
+}
+
 .submit-new-product button:hover{
     cursor: pointer;
     color: #93bbf8;
     transition: 0.3s;
+}
+
+.submit-new-product a:last-of-type:hover{
+    color: #aa4242;
+    transition: 0.3s;
+}
+
+.submit-new-product a{
+    text-decoration: none;
+    color: white;
 }
 
 .display{
@@ -308,6 +322,45 @@ footer{
 
 .footer-top-border{
     border-top: 1px solid rgb(212, 212, 212);
+}
+
+/* DELETE MODAL */
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content{
+    width: 20rem;
+    margin: 10% auto;
+    padding: 1rem;
+    background-color: #6c89b4;
+    color: white;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 0.3rem;
+}
+
+.modal-content button{
+    margin-top: 1rem;
+    border: none;
+    border-radius: 0.2rem;
+}
+
+.modal-content button:hover{
+    cursor: pointer;
+}
+
+.modal-content button:first-of-type{
+    margin-right: 1rem;
+    color: #aa4242;
 }
 
 /* MEDIA QUERIES */
