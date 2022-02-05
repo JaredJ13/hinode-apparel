@@ -14834,6 +14834,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "productCard", ()=>productCard
 );
+var _delete = require("../delete");
 function productCard({ imageUrlPath , title , description , price , category , key  }) {
     const template = `
     <div class="product-card">
@@ -14866,21 +14867,39 @@ function productCard({ imageUrlPath , title , description , price , category , k
 }
 function addButtonControls(productCard1) {
     productCard1.querySelector('#edit').addEventListener('click', EditProductCard);
-    productCard1.querySelector('#delete').addEventListener('click', DeleteProductCard);
+    productCard1.querySelector('#delete').addEventListener('click', DeleteModal);
 }
 function EditProductCard(e) {
 }
-function DeleteProductCard(e) {
+function DeleteModal(e) {
     const modal = document.querySelector('.modal');
-    const cancelButton = document.querySelector('#cancel-delete-button');
-    const deleteButton = document.querySelector('#delete-button');
-    modal.style.display = "block";
+    const cancelButton = modal.querySelector('#cancel-delete-button');
+    const deleteButton = document.querySelector('#modal-delete-button');
     cancelButton.addEventListener('click', function() {
         modal.style.display = "none";
     });
+    modal.style.display = "block";
+    const key = e.currentTarget.dataset.key;
+    deleteButton.addEventListener('click', function() {
+        _delete.DeleteProduct(key);
+        modal.style.display = "none";
+        document.location.reload();
+    });
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cFl8N":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../delete":"cre7I"}],"cre7I":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "DeleteProduct", ()=>DeleteProduct
+);
+var _database = require("firebase/database");
+var _firebaseConfig = require("./libs/firebaseConfig");
+function DeleteProduct(productKey) {
+    const dataRef = _database.ref(_firebaseConfig.db, `Products/${productKey}`);
+    _database.remove(dataRef);
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","firebase/database":"bpqHw","./libs/firebaseConfig":"cFl8N"}],"cFl8N":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 //export service objects

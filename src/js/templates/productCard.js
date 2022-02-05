@@ -1,3 +1,5 @@
+import { DeleteProduct } from '../delete'
+
 function productCard({ imageUrlPath, title, description, price, category, key }) {
 
     const template = `
@@ -35,23 +37,32 @@ function productCard({ imageUrlPath, title, description, price, category, key })
 function addButtonControls(productCard) {
     productCard.querySelector('#edit').addEventListener('click', EditProductCard)
 
-    productCard.querySelector('#delete').addEventListener('click', DeleteProductCard)
+    productCard.querySelector('#delete').addEventListener('click', DeleteModal)
 }
 
 function EditProductCard(e) {
 
 }
 
-function DeleteProductCard(e) {
+function DeleteModal(e) {
     const modal = document.querySelector('.modal')
-    const cancelButton = document.querySelector('#cancel-delete-button')
-    const deleteButton = document.querySelector('#delete-button')
-
-    modal.style.display = "block"
+    const cancelButton = modal.querySelector('#cancel-delete-button')
+    const deleteButton = document.querySelector('#modal-delete-button')
 
     cancelButton.addEventListener('click', function () {
         modal.style.display = "none"
     })
+
+    modal.style.display = "block"
+
+    const key = e.currentTarget.dataset.key
+
+    deleteButton.addEventListener('click', function () {
+        DeleteProduct(key)
+        modal.style.display = "none"
+        document.location.reload()
+    })
 }
+
 
 export { productCard }

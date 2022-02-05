@@ -519,20 +519,15 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"cre7I":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "deleteProduct", ()=>deleteProduct
+);
 var _database = require("firebase/database");
 var _firebaseConfig = require("./libs/firebaseConfig");
-var _productCard = require("./templates/productCard");
-const modal = document.querySelector('.modal');
-const productCardDelete = document.querySelector('#delete');
-const cancelButton = document.querySelector('#cancel-delete-button');
-const deleteButton = document.querySelector('#delete-button');
-productCardDelete.addEventListener('click', function() {
-    modal.style.display = "block";
-});
-cancelButton.addEventListener('click', function() {
-    modal.style.display = "none";
-});
+function deleteProduct(productKey) {
+}
 
-},{"firebase/database":"bpqHw","./libs/firebaseConfig":"cFl8N","./templates/productCard":"5vZiB"}]},["ihfLU","cre7I"], "cre7I", "parcelRequire94c2")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","firebase/database":"bpqHw","./libs/firebaseConfig":"cFl8N"}]},["ihfLU","cre7I"], "cre7I", "parcelRequire94c2")
 
 //# sourceMappingURL=index.199ccb4a.js.map
