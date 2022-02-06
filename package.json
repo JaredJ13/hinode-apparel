@@ -1,0 +1,24 @@
+{
+  "name": "hidone-apparel",
+  "version": "1.0.0",
+  "description": "DMIT-2008 Practical 1",
+  "main": "index.js",
+  "dependencies": {
+    "firebase": "^9.6.6",
+    "parcel": "^2.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaredJ13/hidone-apparel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JaredJ13/hidone-apparel/issues"
+  },
+  "homepage": "https://github.com/JaredJ13/hidone-apparel#readme"
+}

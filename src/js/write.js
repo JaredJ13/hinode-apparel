@@ -1,4 +1,6 @@
-
+import { ref as storageRef, uploadBytes, getDownloadURL } from "firebase/storage";
+import { ref as databaseRef, push, set } from 'firebase/database'
+import { db, storage } from "./libs/firebaseConfig";
 
 
 const submitProductButton = document.querySelector('#productForm')
@@ -27,6 +29,7 @@ async function AddNewProduct() {
 
     // data
     imageFile = imageFile.files[0]
+    let imageFileName = imageFile.name
     category = category.value.trim()
     title = title.value.trim()
     description = description.value.trim()
@@ -60,6 +63,7 @@ async function AddNewProduct() {
         category,
         title,
         description,
-        price
+        price,
+        imageFileName
     })
 }
