@@ -1,5 +1,5 @@
 import { ref as databaseRef, get, set, update, push } from 'firebase/database';
-import { ref as storageRef, uploadBytes, getDownloadURL } from "firebase/storage";
+import { ref as storageRef, uploadBytes, getDownloadURL, deleteObject } from "firebase/storage";
 import { db, storage } from './libs/firebaseConfig';
 
 let imageFile = document.querySelector('#productImage-edit')
@@ -57,6 +57,8 @@ async function updateProduct() {
         imageFileName = data.imageFileName
     } else {
         imageFileName = imageFile.name
+        oldImageRef = storageRef(storage, `Product Images/${data.imageFileName}`)
+        deleteObject(oldImageRef)
     }
 
     category = category.value.trim()
@@ -64,12 +66,12 @@ async function updateProduct() {
     description = description.value.trim()
     price = price.value.trim()
 
-    const imageRef = storageRef(storage, `Product Images/${imageFileName}`)
+    const newImageRef = storageRef(storage, `Product Images/${imageFileName}`)
     const dataRef = databaseRef(db, `Products/${key}`)
 
-    const uploadImage = await uploadBytes(imageRef, imageFile)
+    const uploadImage = await uploadBytes(newImageRef, imageFile)
 
-    const imageUrlPath = await getDownloadURL(imageRef)
+    const imageUrlPath = await getDownloadURL(newImageRef)
 
     const storagePath = uploadImage.metadata.fullPath
 
