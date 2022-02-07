@@ -8,7 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "clean": "rm -rf node_modules .git .parcel-cache dist .DS_Store",
+    "clean": "npm cache clean --force node_modules .git .parcel-cache dist",
     "static": "cp -rf ./src/static   dist",
     "start": "npx parcel src/index.html ",
     "build": "npx parcel build src/index.html"
