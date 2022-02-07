@@ -2,7 +2,6 @@
   "name": "hidone-apparel",
   "version": "1.0.0",
   "description": "DMIT-2008 Practical 1",
-  "main": "index.js",
   "dependencies": {
     "firebase": "^9.6.6",
     "parcel": "^2.2.1"
