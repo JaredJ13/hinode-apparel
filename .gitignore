@@ -2,4 +2,8 @@
 
 /.parcel-cache
 /dist
-/.env
+/public
+
+.env
+.env-local
+.env-template
