@@ -11,7 +11,7 @@
     "clean": "npm cache clean --force node_modules .git .parcel-cache dist",
     "static": "cp -rf ./src/static   dist",
     "start": "npx parcel src/edit.html ",
-    "build": "npx parcel build src/index.html"
+    "build": "npx parcel build src/edit.html"
   },
   "repository": {
     "type": "git",
