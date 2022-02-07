@@ -33,3 +33,6 @@ npx parcel src/index.html
 Inspiration, code snippets, etc.
 * [@mdshifut - product card](https://codepen.io/mdshifut/pen/VrwBJq)
 
+## Netlify Site Status
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2ffe45db-5312-4d28-b286-bbac38b26237/deploy-status)](https://app.netlify.com/sites/mystifying-bose-9b0c6b/deploys)
+
