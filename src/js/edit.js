@@ -3,6 +3,7 @@ import { ref as storageRef, uploadBytes, getDownloadURL, deleteObject } from "fi
 import { db, storage } from './libs/firebaseConfig';
 
 let imageFile = document.querySelector('#productImage-edit')
+let imageFileName = ''
 let image = document.querySelector('#display-edit img')
 let category = document.querySelector('#productCategory-edit')
 let title = document.querySelector('#productTitle-edit')
