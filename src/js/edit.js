@@ -58,7 +58,7 @@ async function updateProduct() {
         imageFileName = data.imageFileName
     } else {
         imageFileName = imageFile.name
-        oldImageRef = storageRef(storage, `Product Images/${data.imageFileName}`)
+        const oldImageRef = storageRef(storage, `Product Images/${data.imageFileName}`)
         deleteObject(oldImageRef)
     }
 
